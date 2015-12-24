@@ -80,6 +80,7 @@ html {
 
 body {
   margin: 0;
+  margin-top: 60px;
 }
 
 /* HTML5 display definitions
@@ -4492,6 +4493,9 @@ input::selection {
   max-width: 100% !important;
 }
 
+.ui.container.main {
+  margin-top: 60px;
+}
 /* Mobile */
 
 @media only screen and (max-width: 767px) {
