@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from os.path import abspath, dirname, join, normpath
+from sys import path
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -39,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'main',
     'worlds',
+    'account',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -54,10 +57,12 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'djworldbuilder.urls'
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,4 +107,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+LOGIN_URL = 'worldbuilder_login' 
+LOGOUT_URL = 'worldbuilder_logout' 
+LOGIN_REDIRECT_URL = 'worldbuilder_home'
+
