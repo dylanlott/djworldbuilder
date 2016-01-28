@@ -2,4 +2,4 @@ from django.shortcuts import render
 from django.http import HttpResponse 
 
 def home(request):
-	return render(request, "main/base.html")
+	return render(request, "main/dashboard.html")
