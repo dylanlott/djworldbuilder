@@ -1,6 +1,10 @@
 from django.shortcuts import render
 
 # Create your views here.
+
+def worlds(request):
+    return render(request, 'worlds/worlds.html')
+
 def addWorld(request):
 	if request.method == 'POST': 
 		form = WorldForm(request.POST)

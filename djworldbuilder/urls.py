@@ -22,8 +22,13 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^account', include('account.urls')),
     url(r'^$', 'main.views.home', name="worldbuilder_home"),
-    url(r'^worlds$', 'main.views.worlds', name="view_worlds"),
+  
 ]
+
+urlpatterns += patterns(
+    'worlds.views', 
+    url(r'^worlds$', 'worlds', name='view_worlds'),
+)
 
 urlpatterns += patterns(
 	'django.contrib.auth.views', 
@@ -35,5 +40,5 @@ urlpatterns += patterns(
 	url(r'^logout/$', 'logout', 
 		{'next_page': 'worldbuilder_home'},
 		name="worldbuilder_logout"),
-
+    
 )
