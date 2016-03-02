@@ -117,3 +117,5 @@ LOGIN_URL = 'worldbuilder_login'
 LOGOUT_URL = 'worldbuilder_logout' 
 LOGIN_REDIRECT_URL = 'worldbuilder_home'
 
+CRISPY_TEMPLATE_PACK = "bootstrap"
+

@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="ui simple dropdown item">
-        <a href="#">Blog</a>
+        <a href="{% url 'post_list' %}">Blog</a>
       </div>
 
       {% if user.is_authenticated %}
