@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^account', include('account.urls')),
     url(r'^worlds', include('worlds.urls')),
     url(r'^$', 'main.views.home', name="worldbuilder_home"), 
+    url(r'^blog/', include('blog.urls')), 
 ]
 
 urlpatterns += patterns(
