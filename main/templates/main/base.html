@@ -28,6 +28,9 @@
           <a class="item" href="{% url 'view_worlds' %}">View All</a>
         </div>
       </div>
+      <div class="ui simple dropdown item">
+        Blog
+      </div>
 
       {% if user.is_authenticated %}
         <a href="/logout" class="item">Logout</a>
