@@ -4,4 +4,12 @@
 
 <h1>Worlds</h1>
 
+{% for world in worlds %}
+  <p> {{world}} </p>
+{% endfor %}
+
+{% if not worlds %}
+  <p>You have no worlds. </p>
+{% endif %}
+
 {% endblock %}
