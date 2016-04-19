@@ -1,15 +1,30 @@
-{% extends "main/templates/main/base.html" %}
-
-{% block content %}
-
+{% extends "main/templates/main/base.html" %} {% block content %}
 <h1>Worlds</h1>
-
-{% for world in worlds %}
-  <p> {{world}} </p>
-{% endfor %}
+<div class="ui cards">
+    {% for world in worlds %}
+    <div class="card">
+        <div class="content">
+            <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+            <div class="header">
+                {{world}}
+            </div>
+            <div class="meta">
+                World Details
+            </div>
+            <div class="description">
+                World Details 2
+            </div>
+        </div>
+        <div class="extra content">
+            <div class="ui two buttons">
+                <div class="ui basic green button">Approve</div>
+                <div class="ui basic red button">Decline</div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 {% if not worlds %}
-  <p>You have no worlds. </p>
-{% endif %}
-
-{% endblock %}
+<p>You have no worlds. </p>
+{% endif %} {% endblock %}

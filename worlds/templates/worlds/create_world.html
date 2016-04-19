@@ -4,10 +4,10 @@
 
 <h1>Create World</h1>
 
-<form action="/worlds/create" method="post">
+<form action="/worlds/create" method="post" class="ui">
     {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Submit" />
+    {{ form.as_p }}
+    <input type="submit" value="Submit" class="ui button"/>
 </form>
 
 
