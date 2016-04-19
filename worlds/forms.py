@@ -13,3 +13,4 @@ class WorldForm(forms.Form):
     name = forms.CharField(max_length=100)
     climate = forms.CharField(max_length=30, 
             widget=forms.Select(choices=CLIMATE_CHOICES))
+    civilizations = forms.CharField(forms.Select(choices=CIVILIZATIONS))
