@@ -4,4 +4,11 @@
 
 <h1>Create World</h1>
 
+<form action="/worlds/create" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+
+
 {% endblock %}
