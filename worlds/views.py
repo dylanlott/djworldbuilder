@@ -12,15 +12,17 @@ def view_worlds(request):
 
     return render(request, 'worlds/worlds.html', {all_worlds: all_worlds})
 
-def addWorld(request):
-    if request.method == 'POST': 
+
+def create_world(request):
+    template = "worlds/templates/worlds/create_world.html"
+
+    if request.method == 'POST':
         form = WorldForm(request.POST)
 
-    if form.is_valid():
-        return HttpResponseRedirect('/')
+        if form.is_valid():
+            return HttpResponseRedirect('/worlds')
+
     else: 
         form = WorldForm()
 
-    return render_to_response('addWorld.html', {
-    'form': form,
-    })
+    return render(request, template, {"form": form})
