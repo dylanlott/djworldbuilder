@@ -36,6 +36,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms', 
+    'main', 
+    'worlds', 
+    'account', 
+    'blog', 
 )
 
 MIDDLEWARE_CLASSES = (
@@ -43,8 +48,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
 )
 
 ROOT_URLCONF = 'django_project.urls'
@@ -84,3 +91,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
+LOGIN_URL = 'worldbuilder_login' 
+LOGOUT_URL = 'worldbuilder_logout' 
+LOGIN_REDIRECT_URL = 'worldbuilder_home'
+
+CRISPY_TEMPLATE_PACK = "bootstrap"
