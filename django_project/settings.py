@@ -12,12 +12,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 # BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PACKAGE_ROOT = os.path.abspath(os.path.dirname(__file__))
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR, ],
+        'DIRS': [os.path.join(PACKAGE_ROOT, 'template')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
