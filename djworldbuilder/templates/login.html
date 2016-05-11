@@ -1,4 +1,4 @@
-{% extends 'django_project/templates/main/base.html' %}  
+{% extends 'main/templates/main/base.html' %}  
 {% load staticfiles %}
 
 {% block content %}
@@ -75,7 +75,7 @@
     </form>
 
     <div class="ui message">
-      New to us? <a href="#">Sign Up</a>
+      New to us? <a href="{% url 'signup' %}">Sign Up</a>
     </div>
   </div>
 </div>

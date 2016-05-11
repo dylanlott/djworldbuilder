@@ -36,39 +36,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-# Application definition
-
-INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    #Third Party Apps
-    'crispy_forms',
-    #Apps
-    'main',
-    'worlds',
-    'account',
-    'blog', 
-)
-
-MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-)
-
-ROOT_URLCONF = 'djworldbuilder.urls'
+ROOT_URLCONF = 'django_project.urls'
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+WSGI_APPLICATION = 'django_project.wsgi.application'
 
 TEMPLATES = [
     {
@@ -86,7 +58,6 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'djworldbuilder.wsgi.application'
 
 
 # Database

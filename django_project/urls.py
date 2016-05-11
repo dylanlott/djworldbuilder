@@ -15,7 +15,7 @@ urlpatterns += patterns(
         'django.contrib.auth.views',
 
         url(r'^login/$', 'login',
-                {'template_name': 'templates/login.html'},
+                {'template_name': 'djworldbuilder/templates/login.html'},
                 name='worldbuilder_login'),
 
         url(r'^logout/$', 'logout',

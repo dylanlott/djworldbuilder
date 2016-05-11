@@ -115,3 +115,10 @@ LOGOUT_URL = 'worldbuilder_logout'
 LOGIN_REDIRECT_URL = 'worldbuilder_home'
 
 CRISPY_TEMPLATE_PACK = "bootstrap"
+
+# Load Local Settings 
+try:
+    from local_settings import *
+except ImportError as e:
+    pass
+
